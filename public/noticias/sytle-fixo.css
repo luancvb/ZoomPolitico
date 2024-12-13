@@ -1,0 +1,89 @@
+.primeira-noticia {
+    margin-top: 8%;
+}
+
+#divMateria {
+    max-width: 50%;
+    /* Para permitir posicionamento absoluto dos elementos dentro */
+    /* Espaço extra para o botão não sair da div */
+    padding-top: 2%;
+
+}
+
+.manchete {
+    background-color: rgb(17, 102, 49);
+    padding: 10px;
+    text-align: center;
+    font-size: 98%;
+    color: white;
+    width: 90%;
+    margin: auto;
+}
+
+.texto {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    text-align: left;
+    margin: 2% 5%;
+    margin-top: 6px;
+    width: 90%;
+    text-align: left;
+}
+
+.introducao {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    text-align: left;
+    margin: 2% 5%;
+    width: 90%;
+    text-align: left;
+}
+
+.button-leia-mais {
+    position: relative;
+    bottom: 0;
+    /* Garante que o botão fique no final do parágrafo */
+    margin: 0 10%;
+    width: 80%;
+    height: 10%;
+    /* Para ocupar toda a largura da div */
+    height: 3.2em;
+    /* Calculado para cobrir duas linhas de texto */
+    background-color: rgba(28, 146, 67, 0.836);
+    /* Fundo verde translúcido */
+    color: black;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    line-height: 3.2em;
+    /* Centraliza o texto verticalmente */
+    cursor: pointer;
+
+    /* Suaviza o texto atrás do botão */
+}
+
+.button-leia-mais:hover {
+    background-color: rgb(255, 255, 255);
+    /* Torna o botão mais visível ao passar o mouse */
+}
+
+.categoria {
+    font-size: 90%;
+    text-align: left;
+    margin: 3% 0 7px 5%;
+    width: 98%;
+}
+
+@media (max-width: 980px) {
+    #divMateria {
+        max-width: 98%;
+    }
+
+    .primeira-noticia {
+        margin-top: 39%;
+    }
+
+    .button-leia-mais {
+        margin: 0 0 0 10%;
+    }
+}

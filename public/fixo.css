@@ -1,0 +1,164 @@
+body {
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background-color: white;
+    margin-top: -1%;
+    padding: 2% 0 2% 0;
+
+}
+
+header img {
+    max-width: 200px;
+    height: auto;
+    margin: 8% 0 0 50%;
+
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 9% 0 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 6px;
+    position: relative;
+    /* Para posicionar a linha corretamente */
+}
+
+nav ul li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -8px;
+    /* Ajuste conforme necessário */
+    width: 1px;
+    height: 100%;
+    background-color: #1c7e19;
+    /* Cor da linha */
+    opacity: 0.6;
+    /* Torna a linha levemente translúcida */
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-icon {
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+}
+
+.search-box {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-box input {
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-box button {
+    padding: 5px 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Linha horizontal para telas pequenas */
+.mobile-divider {
+    display: none;
+    width: 95%;
+    border: 0;
+    border-top: 1px solid #1c7e19;
+}
+
+@media (max-width: 980px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        margin-top: -5%;
+        padding-top: 5%;
+    }
+
+    header img {
+        margin-bottom: 8px;
+        margin-left: 0;
+
+    }
+
+    nav ul {
+        justify-content: center;
+        margin: 0;
+    }
+
+    .mobile-divider {
+        display: block;
+        width: 95%;
+    }
+
+
+
+}
+
+
+@media (max-width: 480px) {
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    .search-icon {
+        font-size: 18px;
+    }
+
+    .search-box {
+        width: 95%;
+        box-sizing: border-box;
+        margin: 0 10% 0 0;
+    }
+
+    .search-box input {
+        width: 95%;
+    }
+
+    .search-box button {
+        width: 95%;
+        margin-top: 5px;
+    }
+}
